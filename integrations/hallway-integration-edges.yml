@@ -1,0 +1,16 @@
+generated: '2026-10-23'
+method: none
+source:
+- https://zapier.com/apps/hallway/integrations
+- https://n8n.io/integrations/hallway/
+- https://composio.dev/toolkits/hallway
+- https://monid.ai/tools/hallway
+checked:
+- https://composio.dev/toolkits/hallway
+- https://monid.ai/tools/hallway
+- https://n8n.io/integrations/hallway/
+- https://zapier.com/apps/hallway/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []

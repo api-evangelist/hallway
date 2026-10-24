@@ -1,0 +1,61 @@
+generated: '2026-10-24'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 2
+  other_domain: 2
+  platform: 0
+  roles:
+  - api
+  - marketing
+  - website
+hosts:
+- host: api.hallway.ai
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: hallway.ai
+  role: api
+  relation: other-domain
+- host: api.joinhallway.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: joinhallway.com
+  role: api
+  relation: own
+- host: hallway.ai
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - PrivacyPolicy
+  - Pricing
+  serves:
+  - docs
+  registrable_domain: hallway.ai
+  role: marketing
+  relation: other-domain
+- host: joinhallway.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - hosting
+  vendor: vercel
+  registrable_domain: joinhallway.com
+  role: website
+  relation: own

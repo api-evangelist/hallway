@@ -1,25 +1,69 @@
 aid: hallway
+
 name: Hallway
-description: 'Hallway is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by sequoia-capital) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Hallway is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio; backed by sequoia-capital) and added
+  to the network as a stub for full-pipeline profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/hallway/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-23'
+
 modified: '2026-10-23'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- sequoia-capital
+
 common:
+- type: Hosts
+  url: hosts/hallway-hosts.yml
+- type: Vendors
+  url: vendors/hallway-vendors.yml
+- type: PrivacyPolicy
+  url: https://hallway.ai/privacy
+- type: Pricing
+  url: https://hallway.ai/pricing
+- type: DomainSecurity
+  url: security/hallway-domain-security.yml
 - type: Website
   url: https://joinhallway.com
+
+apis:
+- name: Hallway API
+  description: API for Hallway platform, details not publicly documented
+  humanURL: https://hallway.ai
+  baseURL: null
+  aid: hallway:hallway-api
+
+x-backed-by:
+- sequoia-capital
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Homepage and docs are rendered via JavaScript, no machine‑readable spec discovered.
+  evidence:
+  - url: https://hallway.ai
+    status: 200
+  checked: '2026-10-23'
+x-enrichment:
+  date: '2026-10-23'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
